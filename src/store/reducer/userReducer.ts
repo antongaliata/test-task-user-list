@@ -2,7 +2,9 @@ import { IStateUsers } from "../../interfaces/users";
 import { ActionsType, USERS_ACTION_TYPE } from "../../interfaces/usersAction";
 
 
-const initialState: IStateUsers = {} as IStateUsers;
+const initialState: IStateUsers = {
+    searchText: ''
+} as IStateUsers;
 
 export const usersReducer = (state: IStateUsers = initialState, action: ActionsType): IStateUsers => {
     switch (action.type) {
