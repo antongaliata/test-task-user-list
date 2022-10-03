@@ -1,4 +1,39 @@
+.user-row{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr .4fr;
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    min-height: 40px;
+    align-items: center;
+    padding: 5px;
+    transition: background-color .2s;
+}
 
+@media (max-width: 450px) {
+    .user-row{
+        font-size: 10px;
+    }
+}
+
+.user-row:hover{
+    transition: background-color .2s;
+    background: rgba(230, 230, 230, 0.5);
+    cursor: pointer;
+}
+
+.user-row-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-row span:last-child img{
+    cursor: pointer;
+}
+
+.user-row span:last-child img:hover{
+    width: 23px;
+}
 
 .found-text{
     color: red;

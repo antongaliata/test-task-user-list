@@ -1,0 +1,25 @@
+.user-list{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-list-title{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr .4fr;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.user-list-title span:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.user-list-title span{
+    /*border: 1px solid black;*/
+    color: #333333;
+}

@@ -1,0 +1,33 @@
+.user-modal-container {
+    min-height: 250px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.user-modal-container h1 {
+    font-size: 25px;
+}
+
+.user-modal-company {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-modal-company h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.user-modal-company-row{
+    display: flex;
+    gap: 3px;
+}
+
+.user-modal-company-row h6{
+    color: rgba(41, 41, 41, 0.7);
+}

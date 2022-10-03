@@ -1,5 +1,5 @@
 export interface IUser {
-    id: 1,
+    id: number
     name: string
     username: string
     email: string
@@ -28,6 +28,7 @@ export interface ICompany {
 
 export interface IStateUsers {
     users: IUser[]
-    currentUser: IUser
+    copyUsers: IUser[]
+    currentUser: IUser | null
     searchText: string
 }

@@ -8,4 +8,4 @@ export const isShowComponent = <P extends object>(Component: React.ComponentType
 	return ({isShow, ...props}: IsShowComponentProps) =>{
 		return isShow ? <Component {...props as P} /> : null;
 	}
-}
+};

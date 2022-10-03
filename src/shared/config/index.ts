@@ -1,1 +1,1 @@
-export const { API_URL, API_MEDIA_URL, REACT_APP_API_MAP } = process.env;
+export const { REACT_APP_API_URL } = process.env;

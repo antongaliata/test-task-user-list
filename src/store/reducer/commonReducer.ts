@@ -1,30 +1,25 @@
-import { IStateUsers } from "../../interfaces/usersType";
-import { ActionsType, USERS_ACTION_TYPE } from "../../interfaces/usersActionType";
+import { ActionsType, COMMON_ACTION_TYPE } from "../../interfaces/commonAction";
+import { IStateCommon } from "../../interfaces/common";
 
 
-const initialState: IStateUsers = {} as IStateUsers;
+const initialState: IStateCommon = {} as IStateCommon;
 
-
-export const notificationsReducer = (state: IStateUsers = initialState, action: ActionsType): IStateUsers => {
+export const commonReducer = (state: IStateCommon = initialState, action: ActionsType): IStateCommon => {
     switch (action.type) {
 
-        case USERS_ACTION_TYPE.SET_USERS: {
-            return {...state, users: [...action.payload]}
+        case COMMON_ACTION_TYPE.SET_IS_LOADING : {
+            return {...state, isLoading: action.payload}
         }
 
-        case USERS_ACTION_TYPE.SET_USER: {
-            return {...state, currentUser: action.payload}
+        case COMMON_ACTION_TYPE.SET_NOTIFICATION : {
+            return {...state, notification: {...action.payload, isShow: true}}
         }
 
-        case USERS_ACTION_TYPE.DELETE_USER: {
-            return {...state, users: state.users.filter(user => user.id !== action.payload)}
-        }
-
-        case USERS_ACTION_TYPE.SEARCH: {
-            return {...state, searchText: action.payload}
+        case COMMON_ACTION_TYPE.CLOSE_NOTIFICATION: {
+            return {...state, notification: {isShow: false}}
         }
 
         default:
-            return state
+            return state;
     }
-}
+};

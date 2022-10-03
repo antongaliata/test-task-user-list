@@ -1,0 +1,39 @@
+.alert-container{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px 40px;
+    max-width: 350px;
+    width: 100%;
+    height: 100px;
+    backdrop-filter: blur(10px);
+    color: white;
+    position: fixed;
+    top: 100px;
+    right: -1px;
+    border-radius: 10px 0 0 10px;
+}
+
+.alert-success{
+    background: rgba(31, 79, 45, 0.4);
+}
+
+.alert-error{
+    background: rgba(140, 27, 27, 0.4);
+}
+
+.alert-button-close{
+    width: 12px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    cursor: pointer;
+}
+
+.alert-title{
+    font-size: 19px;
+}
+
+.alert-description{
+
+}

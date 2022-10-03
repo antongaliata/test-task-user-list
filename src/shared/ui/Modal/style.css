@@ -1,0 +1,35 @@
+.modal-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.modal-container {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 5px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px 10px;
+}
+
+.modal-close {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}

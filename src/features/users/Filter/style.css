@@ -1,0 +1,25 @@
+.filter-container{
+display: flex;
+    gap: 15px;
+}
+
+.filter-input{
+    max-width: 400px;
+    width: 100%;
+    height: 35px;
+    border: 1px solid #E6E6E6;
+    padding: 5px;
+    background: white;
+}
+
+.filter-reset{
+    height: 35px;
+    width: 150px;
+    background: rgba(73, 119, 211, 0.8);
+    color: white;
+    padding: 2px;
+}
+
+.filter-reset:hover{
+    background: #4977d3;
+}

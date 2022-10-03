@@ -1,24 +1,30 @@
 import React from "react";
-import imgClose from "../assets/icons/crossClose.svg";
-import styles from "./styles.module.scss";
+import imgClose from "../assets/icons/closeBlack.svg";
+import './style.css';
+
 
 interface IProps {
     children: React.ReactNode;
-    open: boolean;
-    setOpen: (isOpen: boolean) => void;
+    closeModal: (isShow: boolean) => void;
 }
 
 export const Modal = (props: IProps) => {
-    const { children, setOpen, open } = props;
+    const { children, closeModal } = props;
 
-    if (!open) return null;
+    const close = () => closeModal(false);
+
+    const handleMouseClick = (event: React.MouseEvent<HTMLElement>) => {
+        if(event.currentTarget === event.target) close();
+    };
 
     return (
-        <div className={styles.overlay}>
-            <div className={styles.modal}>
-                <div className={styles.close} onClick={() => setOpen(false)}>
-                    <img src={imgClose} alt={""} />
-                </div>
+        <div className={'modal-overlay'} onClick={handleMouseClick}>
+            <div className={'modal-container'}>
+                    <img
+                        className={'modal-close'}
+                        src={imgClose}
+                        alt={""}
+                        onClick={close}/>
                 {children}
             </div>
         </div>
